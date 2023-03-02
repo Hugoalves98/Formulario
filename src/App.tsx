@@ -48,13 +48,13 @@ const handleChangeInput = useCallback(
 ) 
 
 if(isLoggedIn) {
-  return <div className="container mt-5">
+  return <div className="container mt-5  swing">
      <p className="fs-1 mb-5">Bem-vindo</p>
   </div>
 }
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 fade">
       <p className="fs-1 mb-5">Login</p>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
@@ -65,6 +65,7 @@ if(isLoggedIn) {
             id="email" 
             name="email" 
             value={formState.email}
+            placeholder="Type an email address valid"
             required
             //onChange={e => setFormState({...formState, email: e.currentTarget?.value || ""})}
             onChange={handleChangeInput}
@@ -77,6 +78,7 @@ if(isLoggedIn) {
             className="form-control" 
             id="password" 
             name="password"
+            placeholder="Type your strong password chosen by you"
             required
             value={formState.password}
             onChange={handleChangeInput}
